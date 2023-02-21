@@ -4,8 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Pizzactrl;
 use App\Http\Controllers\Authctrl;
 use App\Http\Controllers\Dashboardctrl;
-use Illuminate\Foundation\Inspiring;
-use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
+// use Illuminate\Foundation\Inspiring;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,23 +21,23 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 //     return view('welcome');
 // });
 // Route::get('/', [Pizzactrl::class, 'uploadform']);
-Route::post('/fileupload', [Pizzactrl::class, 'fileupload']);
+// Route::post('/fileupload', [Pizzactrl::class, 'fileupload']);
 
-Route::get('/pizzas/{id}', [Pizzactrl::class, 'index']);
-Route::get('/pizza/data', [Pizzactrl::class, 'data']);
-Route::get('/test', [Pizzactrl::class, 'test']);
-Route::get('/getdata', [Pizzactrl::class, 'getdata'])->middleware('isdatabaseonline');
-Route::get('/getpdf', [Pizzactrl::class, 'getPdf']);
-Route::get('/async', [Pizzactrl::class, 'async']);
-Route::get('/log', [Pizzactrl::class, 'logmsg']);
-Route::get('/quote', function () {
-    echo $quote = Inspiring::quote();
-});
+// Route::get('/pizzas/{id}', [Pizzactrl::class, 'index']);
+// Route::get('/pizza/data', [Pizzactrl::class, 'data']);
+// Route::get('/test', [Pizzactrl::class, 'test']);
+// Route::get('/getdata', [Pizzactrl::class, 'getdata'])->middleware('isdatabaseonline');
+// Route::get('/getpdf', [Pizzactrl::class, 'getPdf']);
+// Route::get('/async', [Pizzactrl::class, 'async']);
+// Route::get('/log', [Pizzactrl::class, 'logmsg']);
+// Route::get('/quote', function () {
+//     echo $quote = Inspiring::quote();
+// });
 
-Route::get('/helper', function () {
-    echo unique_str();
-});
-Route::get('/sendmail', [Pizzactrl::class, 'mailJobQueue']);
+// Route::get('/helper', function () {
+//     echo unique_str();
+// });
+// Route::get('/sendmail', [Pizzactrl::class, 'mailJobQueue']);
 
 
 
