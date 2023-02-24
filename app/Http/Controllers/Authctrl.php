@@ -90,6 +90,11 @@ class Authctrl extends Controller
         ])->onlyInput('email');
     }
 
+    public function logout()
+    {
+        
+    }
+
     public function messages()
     {
         return [

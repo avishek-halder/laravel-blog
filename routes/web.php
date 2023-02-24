@@ -45,6 +45,7 @@ use App\Http\Controllers\Dashboardctrl;
 Route::get('/', [Dashboardctrl::class, 'index']);
 Route::get('/login', [Authctrl::class, 'show'])->name('login');
 Route::post('/login', [Authctrl::class, 'login']);
+Route::get('/logout', [Authctrl::class, 'logout'])->name('logout');
 Route::get('registration', [Authctrl::class, 'registration'])->name('register-user');
 Route::post('registration', [Authctrl::class, 'customRegistration'])->name('register.custom');
 //Demo-Project
