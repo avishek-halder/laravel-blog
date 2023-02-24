@@ -3,15 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Hash;
-
-
-use Illuminate\Support\Arr;
-use Illuminate\Support\Collection;
-use App\Models\User;
-
-use Illuminate\Support\Facades\Log;
+use Illuminate\Http\RedirectResponse;
+// use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Auth;
+
+use App\Models\User;
+use Hash;
 
 class Authctrl extends Controller
 {
@@ -90,9 +87,15 @@ class Authctrl extends Controller
         ])->onlyInput('email');
     }
 
-    public function logout()
+    public function logout(Request $request): RedirectResponse
     {
-        
+        Auth::logout();
+ 
+        $request->session()->invalidate();
+     
+        $request->session()->regenerateToken();
+     
+        return redirect('/');
     }
 
     public function messages()
